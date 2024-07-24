@@ -1,0 +1,16 @@
+<div class="mp3_player-container ">
+  <img src ="pro\assets\spotify lite.png" width="200"/>
+</br>
+    <div class="mp3-player-card">
+       <div><img [src]="songData?.thumbnail"  width="100"/>
+       </div>
+       <div>
+        <audio controls [style.background]="#1F1F1F">
+            <source src="songData?.link" type="audio/mpeg" />
+        </audio>
+    </div>
+    </div>
+    <div class="mp3-player-card" *ngIf="songData?.link">
+        <h1>No song data Available</h1>
+    </div>
+</div>

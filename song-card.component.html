@@ -1,0 +1,10 @@
+<div class="spotify__song-card" (click)="onNavigateToSong()"> 
+    <div class="spotify_song-card__thumbnail">
+        <img [src]="playlist_thumbnail" width="80"  alt="thumbnail"/>
+    </div> 
+    <div class="spotify_song-card__title text-left">
+        {{title}} {{song_id}}</div>
+    <div class ="spotify_song-card__description">{{description}}
+
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="spotify__home-container row">
+<div class="spotify__home-container_side-bar col-2">
+<div class="spotify__home-container_side-bar-item">
+    <img
+    width="150"
+    class="m-3 text-left"
+    src="pro\src\assets\download.png" alt="spotify lite logo"/>
+</div>
+
+<div class="spotify__home-container_side-bar-item" (click)="onNavigqateToSearch('Home')">
+    <a>Home</a>
+</div>
+
+<div class="spotify__home-container_side-bar-item" (click)="onNavigqateToSearch('search')">
+   <a>Search</a>
+</div>
+
+<div class="spotify__home-container_side-bar-item" (click)="onNavigqateToSearch('Your library')">
+    <a>Your library</a>
+</div>
+<div class="spotify__home-container_side-bar-item" (click)="onNavigqateToSearch('playlist')">
+    <a>Create Playlist</a>
+</div>
+
+</div>
+<div class="spotify__home-container_playlist-container col-10"></div>
+<app-top-nav (inputFilterRes)="inputFilterRes($event)"  ></app-top-nav>
+<div [style.paddingTop]="'48px'" class="mt-5 container-fluid">
+    <h4 [style.color] ="'white'" [style.padding]="'10px">Focus</h4>
+  <div class="playlist_card_collections">
+    <div class="song_card_item" *ngFor="let sc for songCards"></div>
+  </div>
+    <app-song-card
+    [style.thumbnail]="sc.thumbnail" 
+    [title]= "sc.title"
+     [description]="sc.description"
+     [song_id] = "sc.song_id">
+    </app-song-card>
+
+</div>
+</div>
+</div>
+<div [style.paddingTop]="'250px'" class="mt-5 container-fluid" 
+*ngIf="!(sb.isSearchVisible | async)">
+    <h4 [style.color] ="'white'" [style.padding]="'10px">
+      spotify playlist</h4>
+  <div class="playlist_card_collections">
+    <div class="song_card_item" *ngFor="let sc for songCards"
+    (click) = "onNavigqateToSong(sc)">
+    <app-song-card
+    [style.thumbnail]="sc.thumbnail" 
+    [title]= "sc.title"
+     [description]="sc.description"
+     [song_id]="sc.song-id"
+     [link]="sc.song_link"></app-song-card>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>

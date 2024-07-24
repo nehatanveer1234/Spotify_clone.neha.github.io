@@ -1,0 +1,26 @@
+.spotify__song-card{
+    height: 250px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.spotify_song-card__title{
+    font-size: 14px;
+    font-weight: 12px;
+    letter-spacing: 0.3px;
+    word-spacing:0.4px ;
+    color: white;
+    margin-top: 18px;
+    text-transform: capitalize;
+}
+.spotify_song-card__thumbnail{
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 12px;
+    
+}

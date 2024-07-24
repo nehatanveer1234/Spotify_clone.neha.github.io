@@ -1,0 +1,40 @@
+* {
+    background-color: black;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(333deg, rgba(2, 0, 36, 1) 0%, rgba(37, 112, 20, 1) 90%);
+}
+
+.mp3_player-container container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.mp3_player-card {
+    display: flex;
+    flex: row;
+    background-color: hsl(0, 0%, 12%);
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    justify-items: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: space-around;
+}
+img{
+    background-color: hsl(0,0%,12%);
+    margin:40px;
+}
+
+
+
+
+
+
+
+
+
+
